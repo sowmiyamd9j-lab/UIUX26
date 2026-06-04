@@ -1,0 +1,320 @@
+section{
+    text-align: center;
+}
+
+section{
+    min-height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    padding:40px;
+    box-sizing:border-box;
+}
+
+body{
+    background:radial-gradient(to left,#FAEBD7,#C8A96B);
+}
+
+.hero{
+       position: relative;
+       width:100% !important;
+       max-width: 10000vw;
+       height:350px;
+       background-image: url("WhatsApp Image 2026-05-14 at 10.50.44 PM.jpeg");
+       background-size: 100% 100%;
+       background-repeat: no-repeat;
+       background-position: center;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       padding-bottom: 180px;
+       box-sizing: border-box;
+}
+.nav-menu{
+    position:relative;
+    z-index: 999;
+}
+.nav-menu a{
+    text-decoration: none;
+    color:#4A3728;
+    margin:0 15px;
+    transition: 0.3s;
+    font-weight: bold;
+    padding:10px 15px;
+    display:inline-block;
+    position:relative;
+    z-index: 100;
+    transition: 0.3s ease;
+}
+.nav-menu a:hover{
+    color:#DA4F37 !important;
+    transform:translateY(-3px);
+    cursor: pointer;
+}
+.hero h1{
+    margin:0;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(255,255,255,0.7);
+}
+.hero nav{
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.cherry{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:-1;
+    overflow: hidden;
+}
+.petal-cluster{
+    position: absolute;
+    background-image: url("leaves.png.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width:80px;
+    height:50px;
+    top:-100px;
+    opacity:0;
+    animation:fall-and-tumble 12s linear infinite;
+}
+@keyframes fall-and-tumble{
+    0%{
+        top:-10%;
+        transform:translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    10%{
+        opacity:0.6;
+    }
+    50%{
+        transform:translateX(150px) rotate(180deg);
+    }
+    90%{
+        opacity:0.6;
+    }
+    100%{
+        top:110%;
+        transform:translateX(-50px) rotate(360deg);
+        opacity:0;
+    }
+}
+.petal-cluster:nth-child(1){
+    left:5%;
+    animation-delay: 0s;
+    animation-duration: 10s;
+}
+.petal-cluster:nth-child(2){
+    left:30%;
+    animation-delay: 3s;
+    animation-duration: 14s;
+}
+.petal-cluster:nth-child(3){
+    left:55%;
+    animation-delay: 1.5s;
+    animation-duration: 12s;
+}
+.petal-cluster:nth-child(4){
+    left:75%;
+    animation-delay: 6s;
+    animation-duration: 15s;
+}
+.petal-cluster:nth-child(5){
+    left:90%;
+    animation-delay: 4s;
+    animation-duration: 11s;
+}
+
+.pfp-image{
+    width:250px;
+    height:auto;
+    border-radius: 50px;
+    transition: transform 0.6s cubic-bezier(0.34,1.56,0.64,1);
+    cursor:pointer;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.pfp-image:hover{
+    transform:scale(1.1);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.projects-container{
+    display:flex;
+    justify-content: center;
+    gap:30px;
+    flex-wrap: wrap;
+}
+.project-card{
+    background-color: antiquewhite;
+    width:300px;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow:0px 4px 10px grey;
+}
+.project-card:hover{
+    transform:translateY(-8px) scale(1.03);
+    box-shadow: 0px 12px 24px  #3d4a56;
+
+}
+
+.inline-link{
+    color:#3d4a56;
+    text-decoration: none;
+    border-bottom: 1px solid #3d4a56;
+}
+.inline-link:hover{
+    color:#e0b0ff;
+    border-bottom-color:#e0b0ff ;
+}
+
+#contacts-section{
+    width: 100%;
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.form-group{
+    width: 100%;
+    margin-bottom: 20px;
+    
+}
+.form-group label{
+    font-family: sans-serif;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color:#3d4a56;
+    display: block;
+    margin-bottom: 5px;
+}
+.asterisk{
+    color: transparent;
+    font-weight: lighter;
+    transition: color 0.3s ease;
+}
+.asterisk.show-error{
+    color: #ff4d4d;
+}
+.submit-btn{
+    background-color: #3d4a56;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.submit-btn:hover{
+    background-color: #e0b0ff;
+    color: #3d4a56;
+    transform: translateY(-2px);
+}
+.success-box{
+    background-color: #d4edda;
+    color:#155724;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    border: 1px solid #c3e6cb;
+}
+#portfolio-form {
+    width: 100%;
+    max-width: 380px;         
+    margin: 25px 0;                    
+    text-align: left;      
+                  
+}
+
+#portfolio-form input {
+    width: 100%;              
+    padding: 10px;
+    box-sizing: border-box;
+}
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box; 
+    margin-top: 6px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+.form-group{
+    width:100%;
+    margin-bottom: 18px;
+}
+/* Base Style for the Submit Button */
+.submit-btn {
+    background-color: #3d4a56;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #e0b0ff; /* Matches your soft lavender theme */
+    color: #3d4a56;
+}
+
+/* Custom Interactive Icons */
+.social-icon-link {
+    font-size: 2rem; /* Sizes the Bootstrap icons beautifully */
+    color: #3d4a56; /* Match your content heading gray */
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Smooth zoom and color-shift when hovered */
+.social-icon-link:hover {
+    color: #e0b0ff !important; 
+    transform: scale(1.15); 
+}
+
+/* Validation System Colors */
+.text-transparent {
+    color: transparent;
+}
+
+.show-error {
+    color: #ff4d4d !important;
+}
+
+
+/* 1. Target the icon links to give them a smooth transition base */
+.social-icons-row a {
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out !important;
+}
+
+/* 2. Target the Bootstrap icon fonts inside the links */
+.social-icons-row a i {
+    font-size: 2rem; /* Keeps them a perfect, crisp size */
+    color: #3d4a56; /* Your elegant theme color */
+    transition: color 0.2s ease-in-out !important;
+}
+
+/* 3. THE HOVER TRIGGER: This handles the interactive pop */
+.social-icons-row a:hover {
+    transform: scale(1.25) !important; /* Zooms the icon smoothly */
+}
+
+.social-icons-row a:hover i {
+    color: #e0b0ff !important; /* Lights it up into your signature lavender accent! */
+}
